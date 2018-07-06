@@ -1,0 +1,14 @@
+<?php
+/*
+ * @file
+ * code for resume module
+*/
+function resume_theme($existing, $type, $theme, $path) {
+  return [
+    'my_template' => [
+      'variables' => ['test_var' => NULL,'doubles' => array()],
+    ],
+  ];
+}
+?>
+

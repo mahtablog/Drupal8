@@ -1,0 +1,9 @@
+<p>Test twig template!</p>
+<p>test_var: {{ test_var }}</p>
+ {% for key,value in doubles %}
+  Key : {{ key }}
+  Value : {{ value }}
+{% endfor %}
+{{ doubles.first }}
+
+{{ dump(doubles) }}
