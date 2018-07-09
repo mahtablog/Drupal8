@@ -17,22 +17,17 @@ class AdditionController extends ControllerBase {
 
   public function add($first, $second, $third) {
 
-    $total = array('first' => $first);
-		print 'hello';
-		print_r($total);
 		$node = Node::load($first);
-		print 'hello2';
-		print_r($node);
-		print '===========================';
-		
+    $message = $node->body->value;
+		//print $message;exit;
+	  //print($node->get('body')->getString());
 		// Get a node storage object.
-$node_storage = \Drupal::entityManager()->getStorage('node');
+    //$node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    // Load a single node.
+    //print_r($node_storage->load($first));
 
-// Load a single node.
-print_r($node_storage->load($first));
 
-exit;
-
+    $total = array('first' => $message);
     $render_array['addition_arguments'] = array(
       // The theme function to apply to the #items
       //'#theme' => 'item_list',

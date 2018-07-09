@@ -1,9 +1,27 @@
-<p>Test twig template!</p>
-<p>test_var: {{ test_var }}</p>
+{#
+ {{ test_var }}
  {% for key,value in doubles %}
   Key : {{ key }}
   Value : {{ value }}
 {% endfor %}
-{{ doubles.first }}
+#}
 
-{{ dump(doubles) }}
+
+<div class="main-wrapper" style="width:850px; height:1260px; margin:auto">
+  <div class="row-p" style="border:1px solid #000; float:left; margin-bottom:20px; height:300">
+	  <div class="col-p" style="width:410px;float:left; margin-right:28px">{{ doubles.first }}</div>
+		<div class="col-p" style="width:410px;float:left">{{ doubles.first }}</div>
+	</div>
+  <div class="row-p" style="border:1px solid #000; float:left; margin-bottom:20px; height:300">
+	  <div class="col-p" style="width:410px;float:left; margin-right:28px">{{ doubles.first }}</div>
+		<div class="col-p" style="width:410px;float:left">{{ doubles.first }}</div>
+	</div>
+  <div class="row-p" style="border:1px solid #000; float:left; margin-bottom:20px; height:300">
+	  <div class="col-p" style="width:410px;float:left; margin-right:28px">{{ doubles.first }}</div>
+		<div class="col-p" style="width:410px;float:left">{{ doubles.first }}</div>
+	</div>
+  <div class="row-p" style="border:1px solid #000; float:left; margin-bottom:20px; height:300">
+	  <div class="col-p" style="width:410px;float:left; margin-right:28px">{{ doubles.first }}</div>
+		<div class="col-p" style="width:410px;float:left">{{ doubles.first }}</div>
+	</div>
+</div>
