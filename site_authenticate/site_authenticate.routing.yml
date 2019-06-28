@@ -1,0 +1,11 @@
+site_authenticate.page_json:
+  path: '/page_json/{siteapikey}/{node}'
+  defaults:
+    _controller: '\Drupal\site_authenticate\Controller\PageJsonController::get_page_json'
+    _title: 'Page JSON'
+  options:
+    parameters:
+      node:
+        type: entity:node
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,7 @@
+<?php
+/**
+ * Implements hook_uninstall().
+ */
+function site_authenticate_uninstall() {
+  \Drupal::configFactory()->getEditable('system.site')->clear('siteapikey')->save();
+}
