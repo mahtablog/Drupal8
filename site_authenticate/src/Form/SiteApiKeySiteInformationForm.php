@@ -32,7 +32,7 @@ class SiteApiKeySiteInformationForm extends SiteInformationForm
           '#description' => $this->t('The API Key of the site.'),
         ];
         if(!empty($site_config->get('siteapikey'))){
-          $form['actions']['submit']['#value'] = $this->t('Update configuration');
+          $form['actions']['submit']['#value'] = $this->t('Update Configuration');
         }
         return $form;
     }
@@ -49,7 +49,7 @@ class SiteApiKeySiteInformationForm extends SiteInformationForm
         // Passing the remaining values of the original form that we have extended,
         // so that they are also saved
         parent::submitForm($form, $form_state);
-        $this->messenger()->addMessage($this->t('Updated Site API Key is: ').$form_state->getValue('site_api_key'), 'status');
+        $this->messenger()->addMessage($this->t('Site API Key has been saved with value: ').$form_state->getValue('site_api_key'), 'status');
     }
 }
 ?>
